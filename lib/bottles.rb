@@ -7,7 +7,7 @@ class Bottles
     verses = []
     start.downto(finish).map { |i| verse(i)}.join("\n")
   end
-  
+
   def song
     verses(99, 0)
   end
@@ -27,7 +27,7 @@ class Bottles
   end
 
   def secondSentence(bottles)
-    if (bottles == -1)
+    if bottles == -1
       return "Go to the store and buy some more, 99 bottles of beer on the wall.\n"
     end
     "Take #{bottles == 0 ? 'it' : 'one'} down and pass it around, #{bottle(bottles)} of beer on the wall.\n"
