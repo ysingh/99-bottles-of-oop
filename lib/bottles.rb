@@ -5,17 +5,12 @@ class Bottles
 
   def verses(start, finish)
     verses = []
-    start.downto(finish) do |i|
-      verses << verse(i)
-    end
-    verses.join("\n")
+    start.downto(finish).map { |i| verse(i)}.join("\n")
   end
-
+  
   def song
     verses(99, 0)
   end
-
-  private
 
   def bottle(bottles)
     if bottles == 0
