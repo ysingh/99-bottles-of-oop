@@ -3,9 +3,9 @@ class Bottles
     "#{firstSentence(bottles)}#{secondSentence(bottles - 1)}"
   end
 
-  def verses(start, fin)
+  def verses(start, finish)
     verses = []
-    start.downto(fin) do |i|
+    start.downto(finish) do |i|
       verses << verse(i)
     end
     verses.join("\n")
@@ -18,12 +18,12 @@ class Bottles
   private
 
   def bottle(bottles)
-    if (bottles == 0)
+    if bottles == 0
       return "no more bottles"
-    elsif (bottles == 1)
+    elsif bottles == 1
       return "#{bottles} bottle"
     end
-    return "#{bottles} bottles"
+    "#{bottles} bottles"
   end
 
   def firstSentence(bottles)
